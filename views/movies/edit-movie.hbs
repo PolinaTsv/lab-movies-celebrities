@@ -1,0 +1,27 @@
+<a href="/movies" class="link-back">Back</a>
+<h2>Update the movie</h2>
+<h2>Edit the movie: {{movieToEdit.title}} </h2>
+
+<form action="/movies/{{movieToEdit._id}}/edit" method="post">
+  <label>
+    Title:
+    <input type="text" name="title" value="{{movieToEdit.title}}" />
+  </label>
+
+  <label>
+    Genre:
+    <input type="text" name="genre" value="{{movieToEdit.genre}}" />
+  </label>
+  <label>
+    Plot:
+    <input type="numtextber" name="plot" value="{{movieToEdit.plot}}" />
+  </label>
+
+  <label>
+    Cast:
+    <input type="text" name="cast" value="{{movieToEdit.cast}}" />
+  </label>
+
+  <button>Save changes</button>
+</form>
+

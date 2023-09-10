@@ -1,0 +1,58 @@
+{{!-- <a href="/movies" class="link-back">Back</a>
+
+<h2>Create a new movie</h2>
+<form action="/movies/create" method="post" class="celebrity-movie-form">
+  <label>
+    Name:
+    <input type="text" name="title" />
+  </label>
+
+  <label>
+    Occupation:
+    <input type="text" name="genre" />
+  </label>
+
+  <label>
+    Plot:
+    <input type="text" name="plot" />
+  </label>
+
+  <label for="cast">Select Cast:
+    <select name="cast" multiple>
+      {{#each allCelebrities}}
+        <option value="{{_id}}">{{name}}</option>
+      {{/each}}
+    </select>
+  </label>
+
+  <button href="/celebrities" type="submit"> Create </button>
+</form> --}}
+
+<a href="/" class="link-back">Back</a>
+<h2 class="page-title">Create a new movie</h2>
+<form action="/movies/create" method="post" class="common-form">
+  <label>
+    Name:
+    <input type="text" name="title" class="input-field" />
+  </label>
+
+  <label>
+    Occupation:
+    <input type="text" name="genre" class="input-field" />
+  </label>
+
+  <label>
+    Plot:
+    <input type="text" name="plot" class="input-field" />
+  </label>
+
+  <label for="cast">Select Cast:
+    <select name="cast" multiple class="input-field">
+      {{#each allCelebrities}}
+        <option value="{{_id}}">{{name}}</option>
+      {{/each}}
+    </select>
+  </label>
+
+  <button type="submit" class="submit-button">Create</button>
+</form>

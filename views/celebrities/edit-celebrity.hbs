@@ -1,0 +1,21 @@
+<a href="/celebrities" class="link-back">Back</a>
+<h2>Update the celebrity</h2>
+<h2>Edit the celebrity: {{celebrityToEdit.title}} </h2>
+
+<form action="/movies/{{celebrityToEdit._id}}/edit" method="post">
+  <label>
+    Name:
+    <input type="text" name="name" value="{{celebrityToEdit.title}}" />
+  </label>
+
+  <label>
+    Occupation:
+    <input type="text" name="Occupation" value="{{celebrityToEdit.genre}}" />
+  </label>
+  <label>
+    Catch phrase:
+    <input type="text" name="CatchPhrase" value="{{celebrityToEdit.plot}}" />
+  </label>
+
+  <button>Save changes</button>
+</form>

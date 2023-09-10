@@ -1,0 +1,43 @@
+{{!-- <a href="/" class="link-back">Back</a>
+
+<h2 class="page-title">List of celebrities</h2>
+<hr />
+<div class="form-container"> 
+  {{#each allCelebrities}}
+    <div class="form-box">
+      <h3 class="celebrity-title">{{name}}</h3>
+      <p class="celebrity-movie-info">Occupation: {{occupation}}</p>
+      <p class="celebrity-movie-info">Catch phrase: {{catchPhrase}}</p>
+      <a href="/celebrities/{{_id}}/edit">Edit</a>
+      <form action="/celebrities/{{_id}}/delete" method="POST">
+        <button class="delete-button" type="submit">Delete</button>
+      </form>
+    </div>
+  {{/each}}
+</div> 
+<hr /> --}}
+
+
+<a href="/" class="link-back">Back</a>
+
+<h2 class="page-title">List of celebrities</h2>
+<hr />
+<div class="celebrityMovieContainer"> <!-- Make sure this div has the celebrity-container class -->
+  {{#each allCelebrities}}
+    <div class="celebrityMovieBox">
+      <h3 class="celebrity-title">{{name}}</h3>
+      <p class="celebrity-info">Occupation: {{occupation}}</p>
+      <p class="celebrity-info">Catch phrase: {{catchPhrase}}</p>
+      <a href="/celebrities/{{_id}}/edit">Edit</a>
+      <form action="/celebrities/{{_id}}/delete" method="POST">
+        <button class="delete-button" type="submit">Delete</button>
+      </form>
+    </div>
+  {{/each}}
+</div> <!-- Make sure this div wraps all .celebrity-box elements -->
+<hr />
+
+<a href="/celebrities/create" class="link-forward">Add a new celebrity</a>
+
+
+

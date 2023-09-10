@@ -1,0 +1,19 @@
+<a href="/" class="link-back">Back</a>
+<h2 class="page-title">Available movies</h2>
+<hr />
+<div class="celebrityMovieContainer"> <!-- Make sure this div has the celebrity-container class -->
+{{#each allMovies}}
+  <div class="celebrityMovieBox">
+    <h3 class="title">{{title}}</h3>
+    <a class="link-style" href="/movies/{{_id}}">See details</a>
+    <a class="link-style" href="/movies/{{_id}}/edit">Edit</a>
+    <form action="/movies/{{_id}}/delete" method="POST">
+      <button class="delete-button" type="submit">Delete</button>
+    </form>
+  </div>
+{{/each}}
+</div> <!-- Make sure this div wraps all .celebrity-box elements -->
+<hr />
+<a href="/movies/create" class="link-forward">Create a new movie</a>
+
+
